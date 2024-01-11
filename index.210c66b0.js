@@ -1,0 +1,10 @@
+// upward
+var e=document.querySelector(".upward");window.addEventListener("scroll",function(){e.classList.toggle("upward--active",window.scrollY>500)}),e.addEventListener("click",function(){window.scrollTo({top:0,behavior:"smooth"})});// menu
+var n=document.querySelector(".menu"),t=document.querySelector(".navigation"),o=document.querySelector(".closeIcon"),c=document.querySelector(".menuIcon"),s=document.querySelectorAll(".menu__link");function d(){n.classList.contains("showMenu")&&(n.classList.remove("showMenu"),o.style.display="none",c.style.display="block",document.body.classList.remove("no-scroll"))}t.addEventListener("click",function(){n.classList.contains("showMenu")?(n.classList.remove("showMenu"),o.style.display="none",c.style.display="block",document.body.classList.remove("no-scroll")):(n.classList.add("showMenu"),o.style.display="block",c.style.display="none",document.body.classList.add("no-scroll"))}),s.forEach(function(e){e.addEventListener("click",d)}),// Dropdown List
+document.addEventListener("DOMContentLoaded",function(){// Header Dropdown Icon
+var e=document.getElementById("dropdownIcon"),n=document.createElement("ul");n.classList.add("dropdown-list"),["PL","EN","FR"].forEach(function(e){var t=document.createElement("li");t.textContent=e,n.appendChild(t)}),e.appendChild(n),e.addEventListener("click",function(){c(n)});// Menu Dropdown Icon
+var t=document.querySelector(".menu__dropdown-icon"),o=document.createElement("ul");// Function to toggle dropdown visibility
+function c(e){e.classList.toggle("visible")}o.classList.add("menu-dropdown-list"),["PL","EN","FR"].forEach(function(e){var n=document.createElement("li");n.textContent=e,o.appendChild(n)}),t.appendChild(o),t.addEventListener("click",function(){c(o)})});// clear form
+var l=document.getElementById("submit"),i=document.getElementById("subscribeForm");l.addEventListener("click",function(e){e.preventDefault(),i.reset()});//# sourceMappingURL=index.210c66b0.js.map
+
+//# sourceMappingURL=index.210c66b0.js.map
